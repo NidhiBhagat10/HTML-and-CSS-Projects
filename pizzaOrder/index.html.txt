@@ -1,0 +1,95 @@
+<section class="card-section">
+        <div class="card">
+            <img src="assets/delicious-italian-food-removebg-preview.png" alt="">
+            <div class="text">
+                <h2>PIZZA</h2>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut atque pariatur totam saepe? Ex labore
+                dolore excepturi hic, illo minus illum! Debitis quae alias modi rerum cumque sequi nemo sit, tempore
+                vero reiciendis necessitatibus asperiores nisi quas, eius, odio molestiae?
+                <h3>$12 <button>Add to Cart</button></h3>
+                
+            </div>
+        </div>
+    </section>
+
+
+
+/****** card *******/
+
+.card-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s;
+}
+
+.card {
+    border: 1px solid;
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    width: 410px;
+    height: 410px;
+    border-radius: 50%;
+    border: 6px solid #00000083;
+    box-shadow: inset 0 0 25px rgba(55, 55, 55, 0.662), 5px 10px 5px #000;
+    position: relative;
+}
+
+.card:hover {
+    transition:all 3s;
+    width: 50%;
+    height: 75%;
+    border-radius: 15%;
+}
+
+.card img {
+    transform: scale(.9);
+}
+
+.text {
+    position: absolute;
+    color: transparent;
+    padding: 2rem;
+}
+
+.text:hover {
+    transition: all 2s;
+    position: absolute;
+    padding: 2rem;
+    width: 80%;
+    height: 60%;
+    top: 50%;
+    color: #fff;
+    border-radius: 15%;
+    background: #000;
+}
+
+.text h3, .text h2{
+    padding : 2rem 0;
+}
+
+.text button{
+    width: 9rem;
+    height: 2.6rem;
+    border-radius: 20px;
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background: linear-gradient(90deg, #58ff9e, #39cf39);
+}
+
+.text button:hover{
+    transition: all 1s;
+    color: #fff;
+    border: none;
+    font-weight: 800;
+    background: linear-gradient(90deg, #39cf39, #58ff9e);
+}
+
+.text button:active{
+    transform: scale(.9);
+}

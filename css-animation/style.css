@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    width: 99%;
+    height: 98vh;
+    border: 20px solid #7c4afb;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.box-1,
+.box-2 {
+    width: 250px;
+    height: 60px;
+    background-color: #8b5dff;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.box-1 {
+    top: 1%;
+    left: 10Px;
+    animation-name: upper-box-movement;
+    animation-duration: 2s;
+    animation-iteration-count: infinit;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes upper-box-movement {
+    to {
+        top: 1%;
+        left: 73.2%;
+    }
+
+    from {
+        top: 1%;
+        left: 2%;
+    }
+}
+
+.box-2 {
+    bottom: 2%;
+    right: 1%;
+    animation-name: bottem-box-movement;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinit;
+    animation-direction: alternate;
+}
+
+@keyframes bottem-box-movement {
+    to {
+        bottom: 1%;
+        right: 73.2%;
+    }
+
+    from {
+        bottom: 1%;
+        right: 1%;
+    }
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 145, 0);
+    border-radius: 50%;
+    position: relative;
+    top: 74.5%;
+    left: 82%;
+    animation-name: circle-movement;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinit;
+    animation-direction: alternate;
+
+}
+
+@keyframes circle-movement {
+    0%{
+        top: 74.5%;
+        left: 82%;
+    }
+    30%{
+        top: 9%;
+        left: 10%;
+    }
+    60%{
+        top: 50%;
+        left: 0%;
+    }
+    100%{
+        top: 75.6%;
+        left: 5%;
+    }
+}

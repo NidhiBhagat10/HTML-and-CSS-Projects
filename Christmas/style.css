@@ -1,0 +1,403 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --yellow: #fff7c9;
+}
+
+/**** Chrismas card ****/
+.cardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 34px);
+    background-image: url(assets/210.jpg);
+    background-size: cover;
+}
+
+.christmas-card {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff57;
+    backdrop-filter: blur(3px);
+}
+
+/*** Senta ****/
+
+.senta {
+    margin-right: 10vmin;
+    filter: drop-shadow(0 0 5px);
+    transition: .2s;
+}
+
+.senta:hover {
+    animation-name: senta-zoom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes senta-zoom {
+    to {
+        scale: 1.1;
+    }
+
+    from {
+        scale: 1;
+        rotate: -3deg;
+    }
+}
+
+/**** card behaviour ****/
+
+.card {
+    width: 55vmin;
+    height: 77vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    position: absolute;
+    border-radius: 30px;
+    border: 8px solid #fff;
+    box-shadow: 0 0 15px #ffffff7c;
+
+}
+
+.card:hover {
+    box-shadow: 0px 0px 25px #0000002c;
+    transform: scale(1.01);
+}
+
+/***** page-1 *****/
+.page-1 {
+    z-index: 25;
+    background: #ff6060;
+    position: relative;
+    font-size: 10vmin;
+    font-weight: 300;
+    color: white;
+    transform: rotate(1deg);
+    transform: scale(1.01);
+}
+
+.page-1 img {
+    position: absolute;
+    filter: drop-shadow(0 0 15px #ff1b1bbf);
+}
+
+.page-1:hover {
+    transform: rotate(2deg);
+    transition: .2s;
+}
+
+#subMessage {
+    font-size: 2.5vmin;
+    width: 80%;
+    padding-top: 20px;
+}
+
+/***** page-2 *****/
+
+.page-2 {
+    margin-left: 90px;
+    color: #fff;
+    z-index: 24;
+    font-size: 8vmin;
+    font-weight: 800;
+    text-shadow: -3px 0px 1px #00000088;
+    text-align: center;
+    background: #ff7373;
+}
+
+.page-2:hover {
+    transition: .1s;
+    transform: scale(1.05);
+    animation-name: side;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes side {
+    to {
+        right: 45%;
+    }
+
+    from {
+        right: 35%;
+    }
+}
+
+.page-2 img {
+    height: 10vmin;
+    filter: drop-shadow(0 0 15px);
+}
+
+/***** page-2 *****/
+
+.page-3 {
+*    font-weight: 700;
+    background: rgb(199, 241, 255);
+    text-shadow: -1px -1px 5px #00000097;
+    text-align: center;
+    transform: rotate(-6deg);
+    box-shadow: 0 0 15px #c1f1ff;
+    background-image: url(assets/210.jpg);
+    color: #fff;
+}
+
+.page-3:hover {
+    position: relative;
+    z-index: 23;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    to {
+        right: 51%;
+    }
+
+    from {
+        right: 40%;
+        rotate: -6deg;
+    }
+}
+
+
+/****customer detail table****/
+.customer_table {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(assets/flower.jpg);
+    background-size: cover;
+}
+
+.table {
+    font-family: sans-serif;
+}
+
+table img {
+    width: 36px;
+    height: 36px;
+    margin-right: 5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.table_body table,
+.table_body th,
+.table_body td {
+    padding: 1rem;
+}
+
+.table {
+    width: 82vw;
+    height: 90vh;
+    backdrop-filter: blur(7px);
+    background: #00000011;
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+}
+
+.table_header {
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+    padding: .8rem 1rem;
+}
+
+.table_body {
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+}
+
+.table_body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+.table_body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table_body thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #e5e6df;
+}
+
+.table_body tbody tr:nth-child(even) {
+    background-color: #ffffffc8;
+}
+
+.table_body tbody tr:hover {
+    background-color: #00000023;
+}
+
+.status {
+    padding: .4rem 0;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.delivered {
+    color: green;
+    background: #68c05251;
+}
+
+.cancelled {
+    color: red;
+    background: #ff393943;
+}
+
+.pending {
+    background: rgba(255, 187, 0, 0.473);
+}
+
+.shipped {
+    background: rgba(79, 184, 255, 0.525);
+}
+
+@media (max-width: 1000px) {}
+
+/**** section 2: 3D Calender****/
+
+/*** calender ******/
+
+#calenderContainer {
+    width: 100%;
+    height: calc(100vh - 15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0ece2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.calender {
+    width: 40%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1f00478d;
+    backdrop-filter: blur(7px);
+    box-shadow: -2px -2px #fff, inset 2px 2px 15px hsl(280, 100%, 13%);
+}
+
+.calenderCard {
+    background: #ffffff;
+    width: 18.5rem;
+    height: 27.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 5px #0004;
+    box-shadow: inset 0 0 25px #d0cfcf, 1px 1px 15px hsl(280, 100%, 13%);
+}
+
+.calenderCard:hover {
+    transform: scale(1.01);
+}
+
+.calenderCard h2 {
+    padding: .6em;
+}
+
+.viloteGirl {
+    width: 30vmin;
+    padding: 1rem;
+    border: 1px dashed rgb(148, 148, 255);
+}
+
+
+.calenderTable th,
+.calenderTable td {
+    padding: .2rem;
+    font-size: .8rem;
+    text-align: center;
+}
+
+/**** Resolution ****/
+
+.todoPage {
+    width: 40%;
+    height: 70vh;
+    background: #e0c8ff66;
+    box-shadow: inset 0 0 22px #30004751;
+}
+
+.resolutionHeading {
+    text-align: center;
+    margin: 2rem 0 0 0;
+    color: #3b1b85;
+    font-size: 2.1rem;
+    text-shadow: -2px -1px #fff, 0 0 1vmin rgba(0, 0, 0, 0.375);
+}
+
+.todoList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 2vmin 0;
+    padding: 0 5vmin;
+    overflow: hidden;
+}
+
+.todoList div {
+    width: 50%;
+}
+
+.todoList::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+
+.todoList div h3 {
+    padding: 1rem 0;
+}
+
+.todoList li {
+    list-style: none;
+    margin: .4rem;
+}

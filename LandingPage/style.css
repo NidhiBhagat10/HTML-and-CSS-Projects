@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 188, 125);
+    display: flex;
+    overflow: hidden;
+}
+
+/*rgb(152, 130, 148)*/
+
+.part1 {
+    height: 100%;
+    width: 26%;
+    /* background: red;*/
+}
+
+.part2 {
+    height: 100%;
+    width: 68%;
+    background-image: url(assets/naruto.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: #ff8c3929;
+}
+
+.part3 {
+    height: 100%;
+    width: 7%;
+    /* background: rgb(0, 251, 255);*/
+}
+
+.text-div {
+    position: absolute;
+    width: 450px;
+    left: 7%;
+    top: 50%;
+    transform: translate(0, -50%);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    font-family: 'Abril Fatface', serif;
+}
+
+.text-div h1 {
+    font-size: 95px;
+    font-family: monospace;
+    font-weight: 900;
+    letter-spacing: 8px;
+    line-height: 78px;
+    background:linear-gradient(100deg,#db9200,rgb(255, 34, 0),#ffaa00,rgb(255, 77, 0),#ffaa00,#ffaa00);
+    color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.small-img-div {
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(0, -50%);
+    background-image: url(assets/baby-naruto.jpeg);
+    background-size: cover;
+}
+
+.vertical-text {
+    position: absolute;
+    transform: rotate(90deg);
+    right: -89.5%;
+    top: -5%;
+    transform-origin: 0% 0%;
+
+}
+
+.vertical-text h1 {
+    font-size: 70px;
+    font-weight: 900;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+#nav{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+    left:7%;
+    top: 5%;
+    z-index: 2;
+}
+
+.nav-img{
+    height: 50px;
+}
+
+#nav h5{
+    font-size: 20px;
+    font-weight: 100;
+    color: #fff;
+    font-family: sans-serif;
+}
+

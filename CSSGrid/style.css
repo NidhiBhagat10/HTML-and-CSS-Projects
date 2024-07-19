@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vmin;
+}
+
+.container {
+    display: grid;
+    padding: 5vmin 10vmin;
+    width: 100%;
+    height: 100vh;
+}
+
+.box {
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: rgb(127, 255, 242);
+}
+
+/***** layout-1 *****/
+
+.layout-1 {
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.box-1 {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.box-2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.box-6 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 4;
+}
+
+.box-3,
+.box-7,
+.box-5 {
+
+    background-color: #d6fff799;
+}
+
+/***** layout-2 *****/
+
+.layout-2 {
+    gap: 10px 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    width: 80%;
+}
+
+.header {
+    grid-column: 1/3;
+    background-color: rgb(121, 242, 255);
+}
+
+.hero {
+    grid-row: 2/6;
+    grid-column: 1/2;
+    background-color: rgba(213, 189, 224, 0.811);
+}
+
+.main-content {
+    grid-column: 2/3;
+    grid-row: 2/8;
+    background-color: rgb(255, 216, 99);
+}
+
+.sidebar {
+    grid-column: 1/2;
+    grid-row: 6/11;
+    background-color: rgb(170, 232, 112);
+}
+
+.extra-content {
+    grid-row: 8/11;
+    grid-column: 2/3;
+    background-color: #959595;
+}
+
+.related-images {
+    grid-column: 1/2;
+    grid-row: 11/14;
+    background-color: #18b067;
+}
+
+.related-posts {
+    grid-column: 2/3;
+    grid-row: 11/14;
+    background-color: #efc4f8;
+}
+
+.footer {
+    grid-column: 1/3;
+    grid-row: 14/15;
+    background-color: #fba111;
+}
+
+/***** layout-3 *****/
+
+.layout-3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.layout-3 .box-1 {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    background-color: #fff;
+}
+
+.layout-3 .box-2 {
+    grid-row: 2/5;
+    grid-column: 1/2;
+    background-color: #cbcbcb;
+}
+
+.layout-3 .box-3 {
+    grid-row: 2/6;
+    grid-column: 2/5;
+    background-color: #fff;
+}
+
+.layout-3 .box-4 {
+    grid-row: 5/7;
+    grid-column: 1/2;
+    background-color: #f0c4ff;
+}
+
+.layout-3 .box-5 {
+    grid-row: 6/7;
+    grid-column: 2/5;
+    background-color: #a4c4ffce;
+}
+
+.layout-3 .box-6 {
+    grid-row: 7/8;
+    grid-column: 1/5;
+    background-color: #fff;
+}
+
+@media (max-width: 800px) {
+    .layout-3 {
+        display: grid;
+        grid-template-columns: 80vw;
+        grid-template-rows: auto;
+        gap: 10px;
+        justify-content: center;
+        padding: 5vmin 10vmin;
+    }
+
+    .layout-3 .box {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .layout-3 .box-3{
+        grid-row: 3/7;
+    }
+}
